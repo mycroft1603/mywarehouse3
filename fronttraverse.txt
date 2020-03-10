@@ -1,0 +1,24 @@
+#include<stdio.h>
+typedef char TElemType;
+typedef struct BiTNode
+{
+    TElemType data;
+    struct BiTNode *lchild,*rchild; //左右孩子指针 
+}BiTNode,*BiTree;
+
+void PreQrderTraverse(BiTree T)
+{
+    if(T==NULL)
+    {
+        return ;
+    }
+    printf("%c",T->data);
+    PreQrderTraverse(T->lchild);    //先序先遍历左子树
+    PreQrderTraverse(T->rchild);    //然后在遍历右子树
+}
+
+
+int main()
+{
+    return 0;
+}
